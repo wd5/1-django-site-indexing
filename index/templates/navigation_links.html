@@ -1,0 +1,6 @@
+<ul class="nav">
+{% for page in pages %}
+    <li{% if page.slug == current_page_slug %} class="active"{% endif %}><a href="{% url index.views.page page_slug=page.slug %}">{{ page.name }}</a></li>
+{% endfor %}
+    <li{% if current_page_stats %} class="active"{% endif %}><a href="{% url index.views.stats %}">Stats</a></li>
+</ul>

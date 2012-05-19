@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Make Bitcoins Fast | {{ page.name }}{% endblock %}
+{% block keywords %}{{ page.tags }}{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>{{ page.name }}</h1>
+    </div>
+    {{ page.body|safe }}
+{% endblock %}

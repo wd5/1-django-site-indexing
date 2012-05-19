@@ -1,0 +1,10 @@
+body {
+    padding-top: 60px;
+}
+div.adbox {
+    margin-top: 18px;
+    float: right;
+}
+p.question {
+    font-weight: bold;
+}

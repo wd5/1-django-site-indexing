@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="page-header">
+        <h1>Links to easy Bitcoins!</h1>
+    </div>
+    <p>If you're looking to make some easy Bitcoins, the list below is the only one you'll ever need. They are ordered by the most popularity, from most popular to least popular. Try them all! Some are good for one time only, and others are dailies.</p>
+    {% if sites %}
+    <table class='table table-bordered table-striped'>
+        <tr class="{% cycle 'row1' 'row2' as rowcolors %}">
+            <th class="site_name">Site</th>
+            <th class="site_description">Description</th>
+        </tr>
+        {% for site in sites %}
+        <tr class="{% cycle rowcolors %}">
+            <td class="site_name"><a href="{% url index.views.click site_id=site.pk %}">{{ site.name }}</a></td>
+            <td class="site_description"><a href="{% url index.views.view site_id=site.pk %}">{{ site.description|truncatewords:15 }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>There are no sites listed in the database currently.</p>
+    {% endif %}
+{% endblock %}

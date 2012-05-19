@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Make Bitcoins Fast{% endblock %}</title>
+    <meta name="author" content="{% block author %}John Maguire <john@makebitcoinsfast.com>{% endblock %}" />
+    <meta name="description" content="{% block description %}Looking for a way to easily make Bitcoins for free? All the tips, tools, and information you need can be found here!{% endblock %}" />
+    <meta name="keywords" content="{% block keywords %}bitcoin, easy bitcoins, free bitcoins, fast bitcoins, generate bitcoins{% endblock %}" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles/style.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31687573-1']);
+      _gaq.push(['_trackPageview']);
+     
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="{% url index.views.list %}">Make Bitcoins Fast</a>
+                
+                {% if request.path %}
+                {% load navigation_links %}
+                {% navigation_links request.path %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span10">
+                {% block content %}{% endblock %}
+            </div>
+            
+            <!-- Beginning of Operation Fabulous ad code: -->
+            <!-- Ad box ID: 744 -->
+            <script type="text/javascript">
+            <!--
+            var pw_d=document;
+            pw_d.bch_wid="744";
+            //-->
+            </script>
+            <div class="adbox span2">
+                <script type="text/javascript" src="https://www.operationfabulous.com/ads/ad_display.js"></script>
+                <noscript>
+                    <map name="admap744"><area href="https://www.operationfabulous.com/ads/link_nojs.php?wid=744" shape="default" alt="Operation Fabulous Ads" /></map>
+                    <img src="https://www.operationfabulous.com/ads/nojs.php?wid=744" usemap="#admap744" border="0" alt="Operation Fabulous Ads" />
+                </noscript>
+            </div>
+            <!-- End of Operation Fabulous ad code. -->
+        </div>
+            
+        <footer>
+            <div class="row">
+                <hr />
+                
+                <div class="span8"><p>Donate: 1CpMzH3FchTMcAbtrQTofYvQAKSfWUCkgk</p></div>
+                <div class="span4"><p style="text-align: right;">Got a tip? Email support@MakeBitcoinsFast.com!</p></div>
+            </div>
+            <div class="row">
+                <div class="span12"><p style="text-align: center;">Copyright &copy;2012 John "lulzplzkthx" Maguire</p></div>
+            </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

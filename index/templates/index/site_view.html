@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Make Bitcoins Fast | {{ site.name }}{% endblock %}
+{% block keywords %}{{ site.tags }}{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>Site Information</h1>
+    </div>
+    <h2><a href="{% url index.views.click site_id=site.pk %}">{{ site.name }}</a></h2>
+    <p>{{ site.description }}</p>
+    <p><a href="{% url index.views.list %}">Back to listing</a></p>
+{% endblock %}
