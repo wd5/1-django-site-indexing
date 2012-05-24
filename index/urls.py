@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, include, url
-from index.models import Site
 
 urlpatterns = patterns('index.views',
     url(r'^$', 'list'),
