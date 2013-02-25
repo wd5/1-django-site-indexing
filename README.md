@@ -19,3 +19,7 @@ That's it!
 Examples
 --------
 Django Site Indexing is used on [Make Bitcoins Fast](http://www.makebitcoinsfast.com/).
+
+Примечание:
+----------
+Простой рейтинг учитывающий количество кликов и просмотров
